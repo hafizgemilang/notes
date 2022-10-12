@@ -4014,6 +4014,7 @@ Common priviledge escalation exploits and scripts: https://github.com/AusJock/Pr
 - [Metasploit The Penetration Tester’s Guide](https://www.amazon.com/Metasploit-Penetration-Testers-David-Kennedy/dp/159327288X/ref=sr_1_1?keywords=Metasploit+The+Penetration+Tester%E2%80%99s+Guide&qid=1573218431&sr=8-1)
 - [Web Application Hacker's Handbook](https://www.amazon.com/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470/ref=sr_1_1?keywords=Web+Application+Hacker%27s+Handbook&qid=1573218445&sr=8-1)
 - PWK Booklet and Videos
+- [Gitbook - OSCP Notes](https://gabb4r.gitbook.io/oscp-notes/)
 
 
 
