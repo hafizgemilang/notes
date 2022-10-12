@@ -4015,7 +4015,7 @@ Common priviledge escalation exploits and scripts: https://github.com/AusJock/Pr
 - [Web Application Hacker's Handbook](https://www.amazon.com/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470/ref=sr_1_1?keywords=Web+Application+Hacker%27s+Handbook&qid=1573218445&sr=8-1)
 - PWK Booklet and Videos
 - [Gitbook - OSCP Notes](https://gabb4r.gitbook.io/oscp-notes/)
-
+- [https://github.com/R0B1NL1N/OSCP-note](https://github.com/R0B1NL1N/OSCP-note)
 
 
 
