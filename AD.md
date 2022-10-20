@@ -1,10 +1,6 @@
 # Service Enumeration
 ```python
 nmap -sC -sV -Pn -n -p- --min-rate=400 --min-parallelism=512 [ip]
-
-nmap -sV -sC -T5 -Pn [ip]
-
-nmap -sS -sC -sV -T5 -Pn [ip]
 ```
 
 # Initial Access
