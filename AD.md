@@ -1,6 +1,11 @@
 # Service Enumeration
 ```python
 nmap -sC -sV -Pn -n -p- --min-rate=400 --min-parallelism=512 [ip]
+
+nmap -p- --min-rate 10000 -oA scans/nmap-alltcp [ip]
+nmap -p [after listing port] -sC -sV -oA scans/nmap-tcpscripts [ip]
+
+nmap -sU -p- --min-rate 10000 -oA scans/nmap-alludp [ip] #udp
 ```
 
 # Initial Access
