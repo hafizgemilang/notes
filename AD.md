@@ -11,6 +11,7 @@ nmap -sU -p- --min-rate 10000 -oA scans/nmap-alludp [ip] #udp
 # Initial Access
 ```python
 ldapsearch -x -b "dc=,dc=" -H ldap://ip
+ldapsearch -H ldap://cascade.local -x -s base namingcontexts
 
 ssh user@ip
 ```
