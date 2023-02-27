@@ -18,8 +18,7 @@ $Searcher.FindAll()
 ```
 domain trusts
 ```
-([System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()).GetAl
-lTrustRelationships()
+([System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()).GetAllTrustRelationships()
 ```
 users with SPN
 ```
