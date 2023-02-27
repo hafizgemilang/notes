@@ -23,9 +23,7 @@ domain trusts
 users with SPN
 ```
 $Searcher = New-Object DirectoryServices.DirectorySearcher
-$Searcher.Filter = "
-(&(!(samaccountname=krbtgt))(objectclass=user)(objectcategory=user)(servicePr
-incipalName=*))"
+$Searcher.Filter = "(&(!(samaccountname=krbtgt))(objectclass=user)(objectcategory=user)(servicePrincipalName=*))"
 $Searcher.SearchRoot = ''
 $Searcher.FindAll()
 ```
