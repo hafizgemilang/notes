@@ -69,3 +69,6 @@
 | `ssh -p2222 -lubuntu 127.0.0.1`                                | SSH command used to connect to an SSH server through a local port. This can be used to tunnel SSH traffic through an ICMP tunnel. |
 | `regsvr32.exe SocksOverRDP-Plugin.dll`                         | Windows-based command used to register the SocksOverRDP-PLugin.dll. |
 | `netstat -antb \|findstr 1080`                                 | Windows-based command used to list TCP network connections listening on port 1080. |
+
+
+https://github.com/clubby789/wsshuttle
